@@ -1,0 +1,37 @@
+<?php
+/**
+ * @link http://www.yiiframework.com/
+ * @copyright Copyright (c) 2008 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ */
+
+namespace app\assets;
+
+use yii\web\AssetBundle;
+
+/**
+ * Main application asset bundle.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @since 2.0
+ */
+class AppAsset extends AssetBundle
+{
+    public $basePath = '@webroot/web';
+    public $baseUrl = '@web/web';
+    public $css = [
+        'css/bootstrap.css',
+        'css/site.css',
+    ];
+    public $js = [
+        'js/bootstrap.js',
+        'js/min.js',
+        'js/vue.js',
+        'js/main.js',
+
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
+    ];
+}
